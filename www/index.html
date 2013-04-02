@@ -24,10 +24,20 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script>
+     function onLoad(){
+          document.addEventListener("deviceready", onDeviceReady, true);
+     }
+     function onDeviceReady(){
+          navigator.notification.alert("PhoneGap is working!!");
+     }
+  </script>
     </head>
-    <body>
+    <body onload="onLoad();">
         <div class="app">
             <h1>PhoneGap</h1>
+            <h1>Welcome to PhoneGap</h1>
+       <h3>This is andriod phone gap application</h3>
             <div id="deviceready">
                 <p class="status pending blink">Connecting to Device</p>
                 <p class="status complete blink hide">Device is Ready</p>
